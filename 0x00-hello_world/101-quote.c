@@ -9,6 +9,6 @@
  */
 int main(void)
 {
-	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 73);
+	fwrite("and that piece of art is useful\" - Dora Korpar, 2015-10-19 \n",58, 1, stderr);
 	return (1);
 }
