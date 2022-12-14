@@ -2,14 +2,20 @@
 #include "main.h"
 
 /**
- *natnum - Function to sum multiples of 3 and 5
+ *main - Entry Function
+ *
+ *Return: Always 0 (Success)
  */
 int main(void)
 {
-    natnum();
-    return (0);
+	natnum();
+	return (0);
 }
 
+/**
+ *natnum - Function to print the sum of multiples of 3 and 5
+ *
+ */
 void natnum(void)
 {
 	int sum = 0, i;
