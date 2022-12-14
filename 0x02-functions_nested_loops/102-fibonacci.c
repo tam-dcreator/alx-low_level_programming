@@ -18,13 +18,15 @@ int main(void)
  */
 void print_fib50(void)
 {
-	int a = 1, b = 2, i, result;
+	unsigned long int a = 1, b = 2, result;
+	int i;
 
 	for (i = 0; i < 50; i++)
 	{
-		printf("%d\n", a);
+		printf("%d, ", a);
 		result = a + b;
 		a = b;
 		b = result;
 	}
+	_putchar('\n');
 }
