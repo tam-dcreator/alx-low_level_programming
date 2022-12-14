@@ -4,6 +4,12 @@
 /**
  *natnum - Function to sum multiples of 3 and 5
  */
+int main(void)
+{
+    natnum();
+    return (0);
+}
+
 void natnum(void)
 {
 	int sum = 0, i;
