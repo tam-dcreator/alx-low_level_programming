@@ -30,5 +30,5 @@ void print_fib50(void)
 		a = b;
 		b = result;
 	}
-	_putchar('\n');
+	printf("\n");
 }
