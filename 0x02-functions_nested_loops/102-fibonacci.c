@@ -23,7 +23,9 @@ void print_fib50(void)
 
 	for (i = 0; i < 50; i++)
 	{
-		printf("%lu, ", a);
+		printf("%lu", a);
+		if (i != 49)
+			printf(", ");
 		result = a + b;
 		a = b;
 		b = result;
