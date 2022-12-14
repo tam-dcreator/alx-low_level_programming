@@ -29,4 +29,6 @@ void print_times_table(int n);
 
 void natnum(void);
 
+void print_fib50(void);
+
 #endif
