@@ -18,12 +18,12 @@ int main(void)
  */
 void print_fib98(void)
 {
-	unsigned long long int a = 1, b = 2, result;
+	unsigned long int a = 1, b = 2, result;
 	int i;
 
 	for (i = 0; i < 98; i++)
 	{
-		printf("%llu", a);
+		printf("%lu", a);
 		if (i != 97)
 			printf(", ");
 		result = a + b;
