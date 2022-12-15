@@ -18,20 +18,16 @@ int main(void)
  */
 void print_fib_even(void)
 {
-	unsigned long int a = 1, b = 2, result;
+	unsigned long int a = 1, b = 2, result, sum;
 	int i;
 
 	for (i = 0; i < 36; i++)
 	{
 		if (!(a % 2))
-		{
-			printf("%lu", a);
-			if (i != 49)
-				printf(", ");
-		}
+			sum += a
 		result = a + b;
 		a = b;
 		b = result;
 	}
-	printf("\n");
+	printf("%lu\n", sum);
 }
