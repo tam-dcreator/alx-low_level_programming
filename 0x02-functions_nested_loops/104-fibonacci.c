@@ -23,7 +23,7 @@ void print_fib98(void)
 
 	for (i = 0; i < 98; i++)
 	{
-		printf("%lu", a);
+		printf("%llu", a);
 		if (i != 97)
 			printf(", ");
 		result = a + b;
