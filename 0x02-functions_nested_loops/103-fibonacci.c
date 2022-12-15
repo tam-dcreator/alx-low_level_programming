@@ -24,7 +24,7 @@ void print_fib_even(void)
 	for (i = 0; i < 36; i++)
 	{
 		if (!(a % 2))
-			sum += a
+			sum += a;
 		result = a + b;
 		a = b;
 		b = result;
