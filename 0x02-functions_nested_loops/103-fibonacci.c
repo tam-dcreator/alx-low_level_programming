@@ -21,7 +21,7 @@ void print_fib_even(void)
 	unsigned long int a = 1, b = 2, result, sum;
 	int i;
 
-	for (i = 0; i < 36; i++)
+	for (i = 0; i < 33; i++)
 	{
 		if (!(a % 2))
 			sum += a;
