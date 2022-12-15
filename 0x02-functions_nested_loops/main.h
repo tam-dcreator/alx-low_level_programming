@@ -31,4 +31,6 @@ void natnum(void);
 
 void print_fib50(void);
 
+void print_fib_even(void);
+
 #endif
