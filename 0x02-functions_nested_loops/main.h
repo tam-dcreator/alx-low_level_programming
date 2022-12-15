@@ -33,4 +33,6 @@ void print_fib50(void);
 
 void print_fib_even(void);
 
+void print_fib98(void);
+
 #endif
