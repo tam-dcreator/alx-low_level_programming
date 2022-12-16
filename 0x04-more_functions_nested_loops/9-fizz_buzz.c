@@ -20,8 +20,9 @@ int main(void)
 		else
 			printf("%d", i);
 		if (i != 100)
-			putchar(' ');
+			printf(" ");
+		else
+			printf("\n");
 	}
-	printf("\n");
 	return (0);
 }
