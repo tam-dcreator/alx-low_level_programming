@@ -25,7 +25,7 @@ int main(void)
  */
 int prime_number(void)
 {
-	long int num = 61282475143;
+	long int num = 612852475143;
 	int i, int_sqrt, count, ans;
 
 	for ( ; num > 0; num--)
