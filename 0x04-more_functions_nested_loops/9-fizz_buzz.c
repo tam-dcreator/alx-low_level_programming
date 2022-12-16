@@ -19,7 +19,6 @@ int main(void)
 			printf("Fizz");
 		else
 			printf("%d", i);
-		
 		if (i != 100)
 			printf(" ");
 		else
