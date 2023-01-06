@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 		if (num == -1)
 		{
 			printf("Error\n");
-			return (0);
+			return (1);
 		}
 		sum += num;
 	}
