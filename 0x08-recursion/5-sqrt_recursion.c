@@ -5,8 +5,9 @@
  *@n: Number to find the square root
  *@num: 1
  *
+ *Return: Square root of n for n with natural squares and -1 if not
  */
-void find_sqrt(int n, int num)
+int find_sqrt(int n, int num)
 {
 	if (n == 0)
 		return ((num - 1) / 2);
@@ -19,7 +20,7 @@ void find_sqrt(int n, int num)
  *_sqrt_recursion - Calls find sqrt on a number
  *@n: Integer
  *
- *Return: Square root of n for perfect squares and -1 if not
+ *Return: Output from find_sqrt
  */
 int _sqrt_recursion(int n)
 {
