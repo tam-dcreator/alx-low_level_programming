@@ -9,40 +9,38 @@
  */
 int main(int argc, char *argv[])
 {
-	int amount, coins;
+	int i, n, change = 0, cum_change = 0;
+	int values[5] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	amount = atoi(argv[1]);
-	coins = 0;
-	if (amount > 25)
+
+	n = atoi(argv[1]);
+
+	if (n < 1)
 	{
-		while (amount >= 25)
-			amount -= 25, coins++;
+		printf("0\n");
+		return (0);
 	}
-	if (amount > 10 && amount < 25)
+
+	for (i = 0; i < 5; i++)
 	{
-		while (amount >= 10)
-			amount -= 10, coins++;
+		if (values[i] <= n)
+		{
+			change = n / values[i];
+			cum_change += change;
+
+			if (n % values[i] == 0)
+			{
+				printf("%d\n", cum_change);
+				return (0);
+			}
+			n = n - (change * values[i]);
+		}
 	}
-	if (amount > 5 && amount < 10)
-	{
-		while (amount >= 5)
-			amount -= 5, coins++;
-	}
-	if (amount > 2 && amount < 5)
-	{
-		while (amount >= 2)
-			amount -= 2, coins++;
-	}
-	if (amount == 1 || amount == 2 || amount == 5 ||
-	    amount == 10 || amount == 25)
-	{
-		coins++;
-	}
-	printf("%d\n", coins);
+
 	return (0);
 }
