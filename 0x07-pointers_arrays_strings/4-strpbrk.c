@@ -22,8 +22,5 @@ char *_strpbrk(char *s, char *accept)
 		}
 		s++;
 	}
-	/* If accept = '\0', return the pointer to the null of s */
-	if (*accept == *s)
-		return (s);
 	return ('\0');
 }
