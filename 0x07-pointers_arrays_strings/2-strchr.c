@@ -15,5 +15,8 @@ char *_strchr(char *s, char c)
 			return (s);
 	s++;
 	}
+	/* If c = '\0', return the pointer to the null of s */
+	if (c == *s)
+		return (s);
 	return ('\0');
 }
