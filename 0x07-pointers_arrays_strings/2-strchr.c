@@ -9,7 +9,7 @@
  */
 char *_strchr(char *s, char c)
 {
-	char var = 0;
+	char *var = 0;
 
 	while (*s != '\0')
 	{
@@ -17,5 +17,5 @@ char *_strchr(char *s, char c)
 			return (s);
 	s++;
 	}
-	return (var);
+	return (*var);
 }
