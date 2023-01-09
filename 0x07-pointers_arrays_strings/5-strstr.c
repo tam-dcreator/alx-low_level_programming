@@ -9,28 +9,22 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i;
+	char *h, *n;
 
 	for (; *haystack != '\0'; haystack++)
 	/* Iterate if value of haystack is not null */
 	{
-		if (*haystack == *needle)
-		/* current haystack char matches first substr char */
-		{
-			for (i = 1; needle[i] != '\0'; i++)
-			{
-			/* Check if subsequent chars match with substr */
-				if (*(haystack + i) == needle[i])
-				{
-					if (needle[i + 1] == '\0')
-						return (haystack);
-				}
-				else
-				{
-					break;
-				}
-			}
-		}
+		h = haystack;
+		n = needle;
+
+		/* Run a for loop to check if *haystack and subsequent*/
+		/* chars match with substr */
+		for (; *n != '\0' && *h == *n; h++, n++)
+			;
+
+		if (!*n)
+		/*if *n = '\0', !*n = 1, which evaluates as true */
+			return (haystack);
 	}
 	return ('\0');
 }
