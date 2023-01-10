@@ -12,12 +12,14 @@ char *_strdup(char *str)
 	char *s;
 	int len = 0, i = 0;
 
-	/*First get the length of the input*/
+	if (str == NULL)
+		return (NULL);
+	/*Get the length of the input string*/
 	while (str[i++] != '\0')
 		len++;
 
 	/*Create a malloc thats the same size as the input string*/
-	s = malloc(sizeof(char) * len);
+	s = malloc(sizeof(char) * (len + 1));
 
 	if (s == NULL)
 		return (NULL);
