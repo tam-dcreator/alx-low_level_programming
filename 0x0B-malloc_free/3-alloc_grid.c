@@ -11,7 +11,7 @@
 int **alloc_grid(int width, int height)
 {
 	int i, j;
-	int len = 0, r = width, c = height - 1;
+	int len = 0, r = width, c = height;
 	int **grid, *ptr;
 
 	len = sizeof(int *) * r + sizeof(int) * c * r;
