@@ -16,9 +16,6 @@ char *_strdup(char *str)
 	while (str[i++] != '\0')
 		len++;
 
-	if (len == 0)
-		return (NULL);
-
 	/*Create a malloc thats the same size as the input string*/
 	s = malloc(sizeof(char) * len);
 
