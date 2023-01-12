@@ -11,7 +11,7 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i, j, k, len = 2;
+	int i, j, k, len = 1;
 	char *s, *temp;
 
 	if (av == NULL && ac == 0)
@@ -21,7 +21,7 @@ char *argstostr(int ac, char **av)
 	for (k = 0; k < ac; k++)
 		len += strlen(av[k]);
 
-	s = malloc(sizeof(s) * len);
+	s = malloc(sizeof(char) * len);
 	if (s == NULL)
 		return (NULL);
 	/*Hold the malloc in a temp pointer*/
