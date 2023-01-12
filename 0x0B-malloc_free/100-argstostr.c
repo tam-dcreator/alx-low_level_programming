@@ -13,7 +13,7 @@ char *argstostr(int ac, char **av)
 	int i, j;
 	char *s, *temp;
 
-	if (av[0] == NULL && ac == 0)
+	if (*av == NULL && ac == 0)
 		return (NULL);
 	/*Create a malloc with size of the entire argument arr*/
 	s = malloc(sizeof(char *) * sizeof(av));
