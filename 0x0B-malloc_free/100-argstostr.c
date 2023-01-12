@@ -21,7 +21,7 @@ char *argstostr(int ac, char **av)
 	for (k = 0; k < ac; k++)
 		len += strlen(av[k]);
 
-	s = malloc(sizeof(*s) * len);
+	s = malloc(sizeof(s) * len);
 	if (s == NULL)
 		return (NULL);
 	/*Hold the malloc in a temp pointer*/
