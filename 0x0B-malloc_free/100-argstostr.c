@@ -10,13 +10,25 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i, j;
+	int i, j, k, l, len = 0;
 	char *s, *temp;
 
 	if (av == NULL && ac == 0)
 		return (NULL);
 	/*Create a malloc with size of the entire argument arr*/
-	s = malloc(sizeof(char *) * sizeof(av));
+	/* First find the length of the all values in av*/
+	for (k = 0; k < ac; k++)
+	{
+		l = 0;
+		while (av[k][l] != '\0')
+		{
+			len++;
+			l++;
+		}
+	}
+	len++;
+
+	s = malloc(sizeof(char *) * len);
 	if (s == NULL)
 		return (NULL);
 	/*Hold the malloc in a temp pointer*/
