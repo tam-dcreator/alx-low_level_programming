@@ -16,13 +16,13 @@ char *argstostr(int ac, char **av)
 	if (*av == NULL || ac == 0)
 		return (NULL);
 	/*Create a malloc with size of the entire argument arr*/
-	s = malloc(sizeof(char *) * sizeof(av - 1));
+	s = malloc(sizeof(char *) * sizeof(av));
 	if (s == NULL)
 		return (NULL);
 	/*Hold the malloc in a temp pointer*/
 	temp = s;
-	/*Add the argument char to the allocated memory, starting from 1 */
-	for (i = 1; i < ac; i++)
+	/*Add the argument char to the allocated memory, starting from 0 */
+	for (i = 0; i < ac; i++)
 	{
 		j = 0;
 		while (av[i][j] != '\0')
