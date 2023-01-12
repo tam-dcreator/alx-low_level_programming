@@ -16,7 +16,7 @@ char *argstostr(int ac, char **av)
 	if (*av == NULL || ac == 0)
 		return (NULL);
 	/*Create a malloc with size of the entire argument arr*/
-	s = malloc(sizeof(char *) * sizeof(av);
+	s = malloc(sizeof(char *) * sizeof(av));
 	if (s == NULL)
 		return (NULL);
 	/*Hold the malloc in a temp pointer*/
