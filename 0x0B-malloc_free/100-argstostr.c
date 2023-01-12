@@ -17,14 +17,14 @@ char *argstostr(int ac, char **av)
 	if (av == NULL && ac == 0)
 		return (NULL);
 	/*Create a malloc with size of the entire argument arr*/
-	/* First find the length of the all values in av*/
+	/* First find the length of all values in av*/
 	for (k = 0; k < ac; k++)
 		len += strlen(av[k]);
 
 	s = malloc(sizeof(*s) * len);
 	if (s == NULL)
 		return (NULL);
-	/*Hold the malloc in a temp pointer*/
+	/*Hold the address of the first block of space in a temp var*/
 	temp = s;
 	/*Add the argument char to the allocated memory, starting from 0 */
 	for (i = 0; i < ac; i++)
