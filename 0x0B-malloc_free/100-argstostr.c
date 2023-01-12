@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  *argstostr - Function that concatenates all the arguments of your program
@@ -18,7 +19,7 @@ char *argstostr(int ac, char **av)
 	/*Create a malloc with size of the entire argument arr*/
 	/* First find the length of the all values in av*/
 	for (k = 0; k < ac; k++)
-		len += strlen(c[k]);
+		len += strlen(av[k]);
 
 	s = malloc(sizeof(char *) * len);
 	if (s == NULL)
