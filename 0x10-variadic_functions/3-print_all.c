@@ -9,7 +9,7 @@ void print_all(const char * const format, ...)
 {
 	unsigned int i;
 	float f;
-	char *str, *s;
+	char const *str, *s;
 	va_list args;
 
 	str = format;
