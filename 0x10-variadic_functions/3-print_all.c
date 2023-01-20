@@ -26,7 +26,7 @@ void print_all(const char * const format, ...)
 			s = va_arg(args, char*);
 			if (s == NULL)
 			{
-				printf("nil");
+				printf("(nil)");
 				break;
 			}
 			printf("%s", s);
@@ -36,7 +36,7 @@ void print_all(const char * const format, ...)
 			printf("%d", i);
 			break;
 		case 'f':
-			f = va_arg(args, int);
+			f = va_arg(args, double);
 			printf("%f", f);
 			break;
 		}
