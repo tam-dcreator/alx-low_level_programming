@@ -7,10 +7,7 @@
  *@argc: Argument counter
  *@argv: Argument vector
  *
- *Return: On success (0)
- *On error 98 for not enough or too many arguments
- *On error 99 if operator isn't supported
- *On error 100, if user divides by 0
+ *Return: Always success (0)
  */
 int main(int argc, char *argv[])
 {
@@ -20,7 +17,7 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		return (98);
+		exit(98);
 	}
 
 	s = argv[2][0];
@@ -32,13 +29,13 @@ int main(int argc, char *argv[])
 		if ((s == '/' || s == '%') && num2 == 0)
 		{
 			printf("Error\n");
-			return (100);
+			exit(100);
 		}
 	}
 	else
 	{
 		printf("Error\n");
-		return (99);
+		exit(99);
 	}
 
 	result = get_op_func(argv[2])(num1, num2);
