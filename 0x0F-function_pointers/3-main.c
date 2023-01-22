@@ -1,7 +1,6 @@
 #include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
  *main - Entry Point to calulator program
