@@ -8,18 +8,21 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i = 0, num = 0;
+	unsigned int num = 0;
 
 	if (b == NULL)
 		return (0);
-	while (b[i])
+	/*If *b isn't the null byte, while loop would run*/
+	while (*b)
 	{
-		if (!(b[i] == '0' || b[i] == '1'))
+		/*Check if current value of b is not 1 or 0 and return 0*/
+		if (!(*b == '0' || *b == '1'))
 			return (0);
+		/*Multiply num by 2 using bitwise shift right*/
 		num <<= 1;
-		if (b[i] == '1')
+		if (*b == '1')
 			num += 1;
-		i++;
+		b++;
 	}
 	return (num);
 }
