@@ -9,12 +9,12 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
+	/*check if index is greater than length of unsigned int (64)*/
 	if (index > 64)
 		return (-1);
 	if (n == 0)
 		return (0);
 	n = n >> index;
-	if ((n & 1) != 0)
-		return (1);
-	return (0);
+
+	return (n & 1);
 }
