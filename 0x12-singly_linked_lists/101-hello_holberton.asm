@@ -13,4 +13,7 @@ main:
 
 
 	;;end program
+	mov 	rax,60		;sys_exit function
 	mov	rdi,0		;process exit code
+	syscall
+end:	
