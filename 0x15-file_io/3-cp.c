@@ -13,8 +13,8 @@ int main(int argc, char *argv[])
 	char *buf;
 
 	if (argc != 3)
-		dprintf(2, "Usage: %s file_from file_to\n", argv[0]), exit(97);
-	fdf = open(argv[1], O_RDONLY, 0);
+		dprintf(2, "Usage: cp file_from file_to\n"), exit(97);
+	fdf = open(argv[1], O_RDONLY);
 
 	if (fdf < 0)
 	{
