@@ -14,8 +14,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 		dprintf(2, "Usage: %s file_from file_to\n", argv[0]), exit(97);
-
-	fdf = open(argv[1], O_RDONLY);
+	fdf = open(argv[1], O_RDONLY, 0);
 
 	if (fdf < 0)
 	{
@@ -36,7 +35,6 @@ int main(int argc, char *argv[])
 		if (count < 0)
 		dprintf(2, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
-
 	free(buf);
 
 	if (read_count < 0)
@@ -47,7 +45,6 @@ int main(int argc, char *argv[])
 
 	if (close(fdf) != 0)
 		dprintf(2, "Error: Can't close fd %d\n", fdf), exit(100);
-
 	if (close(fdt) != 0)
 		dprintf(2, "Error: Can't close fd %d\n", fdt), exit(100);
 
