@@ -9,11 +9,11 @@
  */
 int find_sqrt(int n, int num)
 {
-        if (n * n == num)
-                return (n);
-        if (n * n > num)
-                return (-1);
-        return (find_sqrt(n + 1, num));
+	if (n * n == num)
+		return (n);
+	if (n * n > num)
+		return (-1);
+	return (find_sqrt(n + 1, num));
 }
 
 /**
