@@ -10,18 +10,25 @@
 char *_strdup(char *str)
 {
 	char *s;
-	int i = 0, len;
+	int i = 0, len = 1;
 
 	if (str == NULL)
 		return (NULL);
 
+<<<<<<< HEAD
 	/* Use the sizeof operator to get the length of str */
 	len = sizeof(str);
+=======
+	/* Get the length of str */
+	while (str[i++])
+		len++;
+>>>>>>> 6760bfb (Changed the way the length of the string to duplicate was calculated)
 
 	s = malloc(sizeof(*s) * len);
 
 	if (s == NULL)
 		return (NULL);
+	i = 0;
 	while (i < len)
 	{
 		s[i] = str[i];
