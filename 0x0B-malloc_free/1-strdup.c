@@ -16,7 +16,7 @@ char *_strdup(char *str)
 		return (NULL);
 
 	/* Use the sizeof operator to get the length of str */
-	len = sizeof(str) - 1;
+	len = sizeof(str);
 
 	s = malloc(sizeof(*s) * len);
 
