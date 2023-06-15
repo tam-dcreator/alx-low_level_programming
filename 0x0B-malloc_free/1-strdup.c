@@ -10,18 +10,19 @@
 char *_strdup(char *str)
 {
 	char *s;
-	int i = 0;
+	int i = 0, len;
 
 	if (str == NULL)
 		return (NULL);
 
 	/* Use the sizeof operator to get the length of str */
+	len = sizeof(str) - 1;
 
-	s = malloc(sizeof(*s) * sizeof(*str));
+	s = malloc(sizeof(*s) * len);
 
 	if (s == NULL)
 		return (NULL);
-	while (str[i] != '\0')
+	while (i < len)
 	{
 		s[i] = str[i];
 		i++;
