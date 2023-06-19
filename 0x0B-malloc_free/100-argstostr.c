@@ -9,9 +9,9 @@
 char *argstostr(int ac, char **av)
 {
 	char *str;
-	int i, j, len = ac, m = 0;
+	int i, j, len = ac - 1, m = 0;
 
-	if (ac <= 1 || av == NULL)
+	if (ac <= 0 || av == NULL)
 		return (NULL);
 
 	/*Find the combined length of the individual strings in argv*/
