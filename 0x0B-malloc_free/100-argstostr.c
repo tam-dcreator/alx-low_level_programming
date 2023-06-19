@@ -15,14 +15,9 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 
 	/*Find the combined length of the individual strings in argv*/
-	for (j = 1; j < ac; j++)
-	{
-		i = 0;
-		while (av[j][i++] != '\0')
-			len++;
-		/*Incrementing len again for new line char included per word */
-		len++;
-	}
+	for (j = 0; j < ac; j++)
+		len += strlen(av[j]);
+
 	str = malloc(sizeof(*str) * len);
 
 	if (str == NULL)
