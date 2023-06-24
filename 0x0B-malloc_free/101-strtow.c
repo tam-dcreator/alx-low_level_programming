@@ -17,15 +17,15 @@ char **strtow(char *str)
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
 
-	if (strlen(str) == 1 && str[0] == ' ')
-		return (NULL);
-
 	while (str[i] != '\0')
 	{
 		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
 			len++;
 		i++;
 	}
+
+	if (len == 0)
+		return (NULL);
 
 	ptr = malloc(sizeof(char *) * (len + 1));
 	if (ptr == NULL)
