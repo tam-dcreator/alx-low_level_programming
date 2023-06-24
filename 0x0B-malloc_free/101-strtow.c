@@ -35,13 +35,13 @@ char **strtow(char *str)
 
 	while (token)
 	{
-		ptr[j] = malloc(sizeof(char) * (strlen(token)));
+		ptr[j] = malloc(sizeof(char) * (strlen(token + 1)));
 		if (ptr[j] == NULL)
 			return (NULL);
 		strcpy(ptr[j], token);
 		j++;
 		token = strtok(NULL, delimiters);
 	}
-
+	free(copy);
 	return (ptr);
 }
