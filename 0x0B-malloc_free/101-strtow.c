@@ -14,7 +14,7 @@ char **strtow(char *str)
 	int len = 0, i = 0, j = 0;
 	const char *delimiters = " ";
 
-	if (str == NULL)
+	if (str == NULL || str[0] == '\0')
 		return (NULL);
 
 	while (str[i] != '\0')
@@ -24,7 +24,7 @@ char **strtow(char *str)
 		i++;
 	}
 
-	ptr = malloc(sizeof(char*) * (len + 1));
+	ptr = malloc(sizeof(char *) * (len + 1));
 	if (ptr == NULL)
 		return (NULL);
 
