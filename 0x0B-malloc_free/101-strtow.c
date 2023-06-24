@@ -35,7 +35,7 @@ char **strtow(char *str)
 
 	while (token)
 	{
-		ptr[j] = malloc(sizeof(char) * (strlen(token) + 1));
+		ptr[j] = malloc(sizeof(char) * (strlen(token)));
 		if (ptr[j] == NULL)
 			return (NULL);
 		strcpy(ptr[j], token);
