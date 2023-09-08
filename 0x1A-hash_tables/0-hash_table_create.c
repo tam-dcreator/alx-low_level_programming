@@ -10,7 +10,11 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *array = NULL;
 
+	if (size == 0)
+		return (NULL);
+
 	array = malloc(sizeof(hash_table_t) * size);
+
 	if (array == NULL)
 	{
 		fprintf(stderr, "Malloc Failed in hash_table_create.\n");
