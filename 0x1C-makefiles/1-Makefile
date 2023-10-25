@@ -3,7 +3,7 @@
 # make -f 1-Makefile # Compile all
 
 CC = gcc
-SRC := $(wildcard *.c)
+SRC = main.c school.c
 
 all: $(SRC)
 	$(CC) $(SRC) -o school
