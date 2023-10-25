@@ -1,3 +1,6 @@
 [submodule "0x1C-makefiles/0x1C-makefiles/0x1B.c"]
 	path = 0x1C-makefiles/0x1C-makefiles/0x1B.c
 	url = https://github.com/alx-tools/0x1B.c
+[submodule "0x1C-makefiles/0x1B.c"]
+	path = 0x1C-makefiles/0x1B.c
+	url = https://github.com/alx-tools/0x1B.c
