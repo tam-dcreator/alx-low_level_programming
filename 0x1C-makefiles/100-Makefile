@@ -6,12 +6,13 @@
 # make fclean -f 100-Makefile	# Remove the temp, executable and object files
 # make re -f 100-Makefile	# Remove object files and recompile the source
 
-.PHONY = all clean oclean fclean re
 CC = gcc
 SRC = main.c school.c
 OBJ = $(patsubst %.c, %.o, $(SRC))
 NAME = school
 CFLAGS = -Wall -Werror -Wextra -pedantic
+
+.PHONY: clean oclean fclean re
 
 all: m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
