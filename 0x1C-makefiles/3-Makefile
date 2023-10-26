@@ -16,10 +16,10 @@ all: $(OBJ)
 %.o: %.c
 	$(CC) -c $< -o $@
 clean:
-	rm -f *~ school
+	rm -f *~ $(NAME)
 oclean:
 	rm -f $(OBJ)
 fclean:
-	rm -f *~ school
+	rm -f *~ $(NAME)
 	rm -f $(OBJ)
 re: | oclean all
