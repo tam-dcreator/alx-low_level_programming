@@ -1,19 +1,18 @@
 # Usage:
 
-# make -f 4-Makefile OR make all -f 4-Makefile		#compile all
-# make clean -f 4-Makefile	# Remove all temp files and the executable
-# make oclean -f 4-Makefile	# Remove the object file
-# make fclean -f 4-Makefile	# Remove the temp, executable and object files
-# make re -f 4-Makefile		# Remove object files and recompile the source
+# make -f 100-Makefile OR make all -f 100-Makefile	#compile all
+# make clean -f 100-Makefile	# Remove all temp files and the executable
+# make oclean -f 100-Makefile	# Remove the object file
+# make fclean -f 100-Makefile	# Remove the temp, executable and object files
+# make re -f 100-Makefile	# Remove object files and recompile the source
 
-CC = gcc
+CC := gcc $(CFLAGS)
 SRC = main.c school.c
 OBJ = $(patsubst %.c, %.o, $(SRC))
 NAME = school
-RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-all: m.h $(SRC)
+all: m.h $(OBJ)
 	$(CC) $(SRC) -o $(NAME)
 clean:
 	$(RM) *~ $(NAME)
