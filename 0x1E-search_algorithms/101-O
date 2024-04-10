@@ -1,2 +1,3 @@
 O(n/m)
 O(n/step)
+O(sqrt(n))
