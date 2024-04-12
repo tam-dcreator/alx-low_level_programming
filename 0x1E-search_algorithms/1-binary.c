@@ -22,7 +22,7 @@ int binary_search(int *array, size_t size, int value)
 		mid = (i + j) / 2;
 		print_array(array, i, j);
 
-		if (array[i] == value)
+		if (array[mid] == value)
 		{
 			return (mid);
 		}
